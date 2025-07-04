@@ -193,12 +193,6 @@ The syntax for images is similar to links, but with a `!` at the beginning.
 
 Create a horizontal rule with three or more asterisks `***`, dashes `---`, or underscores `___`.
 
-```markdown
-***
----
-___
-```
-
 ---
 
 ## Blockquotes
