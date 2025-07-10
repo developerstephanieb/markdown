@@ -1,6 +1,6 @@
 # Markdown Reference Guide
 
-This is a comprehensive guide to the most commonly used Markdown syntax.
+A comprehensive guide to the most commonly used Markdown syntax.
 
 ---
 
@@ -21,7 +21,7 @@ Headers are created using the `#` symbol. The number of `#` symbols corresponds 
 
 ## Text Formatting
 
-You can easily format text to be bold, italic, or have a strikethrough.
+Text can be formatted to be bold, italic, or have a strikethrough.
 
 | Style         | Syntax                       | Example                       |
 | ------------- | ---------------------------- | ----------------------------- |
@@ -143,7 +143,7 @@ For mathematical and scientific notation, many Markdown renderers support LaTeX.
 
 ### Inline Math
 
-Wrap your equation in single dollar signs `$` for inline math.
+Wrap equations in single dollar signs `$` for inline math.
 
 ```markdown
 The Pythagorean theorem is $a^2 + b^2 = c^2$.
@@ -153,7 +153,7 @@ The Pythagorean theorem is $a^2 + b^2 = c^2$.
 
 ### Block Equations
 
-Wrap your equation in double dollar signs `$$` to display it as a centered block on its own line.
+Wrap equations in double dollar signs `$$` to display it as a centered block on its own line.
 
 ```markdown
 The quadratic formula is:
@@ -225,7 +225,7 @@ To display a literal character that has special meaning in Markdown, use a backs
 
 ## Using HTML
 
-You can use raw HTML for features Markdown doesn't support, like comments and collapsible sections.
+Use raw HTML for features Markdown doesn't support, like comments and collapsible sections.
 
 ```html
 <!-- This is a comment -->
