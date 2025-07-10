@@ -225,9 +225,11 @@ To display a literal character that has special meaning in Markdown, use a backs
 
 ## Using HTML
 
-You can use raw HTML for features Markdown doesn't support, like collapsible sections.
+You can use raw HTML for features Markdown doesn't support, like comments and collapsible sections.
 
 ```html
+<!-- This is a comment -->
+
 <details>
   <summary>Click to expand!</summary>
   
