@@ -47,6 +47,7 @@ Use `*`, `+`, or `-` to create unordered lists.
 + Item 3
 ```
 
+**Output**:
 * Item 1
 + Item 2
   - Nested Item 2a
@@ -65,6 +66,7 @@ Use numbers followed by a period.
    2. Nested item 3b
 ```
 
+**Output**:
 1. First item
 2. Second item
 3. Third item
@@ -81,6 +83,7 @@ Create task lists (checkboxes) within a list.
 - [ ] Another task
 ```
 
+**Output**:
 - [x] Completed task
 - [ ] Incomplete task
 - [ ] Another task
@@ -98,6 +101,7 @@ Tables are created using pipes `|` and hyphens `-`.
 | Cell 4   |  Cell 5  |   Cell 6 |
 ```
 
+**Output**:
 | Header 1 | Header 2 | Header 3 |
 | :------- | :------: | -------: |
 | Align L  |  Center  |  Align R |
@@ -115,6 +119,7 @@ Wrap code with single backticks `` ` ``.
 This is an example of `inline code`.
 ```
 
+**Output**:
 This is an example of `inline code`.
 
 ### Fenced Code Blocks
@@ -129,6 +134,7 @@ function greet() {
 ```
 ````
 
+**Output**:
 ```javascript
 function greet() {
   console.log("Hello, world!");
@@ -149,6 +155,7 @@ Wrap equations in single dollar signs `$` for inline math.
 The Pythagorean theorem is $a^2 + b^2 = c^2$.
 ```
 
+**Output**:
 The Pythagorean theorem is $a^2 + b^2 = c^2$.
 
 ### Block Equations
@@ -160,6 +167,7 @@ The quadratic formula is:
 $$x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}$$
 ```
 
+**Output**:   
 The quadratic formula is:
 $$x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}$$
 
@@ -173,6 +181,7 @@ Create links to navigate to other pages or websites.
 [Google](https://www.google.com "Link to Google")
 ```
 
+**Output**:
 [Google](https://www.google.com "Link to Google")
 
 ---
@@ -185,6 +194,7 @@ The syntax for images is similar to links, but with a `!` at the beginning.
 ![A placeholder image](https://placehold.co/400x200/EEE/31343C?text=Placeholder+Image "Placeholder Image")
 ```
 
+**Output**:   
 ![A placeholder image](https://placehold.co/400x200/EEE/31343C?text=Placeholder+Image "Placeholder Image")
 
 ---
@@ -205,6 +215,7 @@ Blockquotes are used to indicate quoted text.
 > > This is a nested blockquote.
 ```
 
+**Output**:
 > This is a blockquote.
 >
 > > This is a nested blockquote.
@@ -219,6 +230,7 @@ To display a literal character that has special meaning in Markdown, use a backs
 \*This is not italic.\*
 ```
 
+**Output**:
 \*This is not italic.\*
 
 ---
@@ -238,6 +250,7 @@ Use raw HTML for features Markdown doesn't support, like comments and collapsibl
 </details>
 ```
 
+**Output**:
 <details>
   <summary>Click to expand!</summary>
   
