@@ -3,7 +3,7 @@ env/
 .venv/
 .env/
 
-.DS_Store
-
 .vscode/
-.history
+.history/
+
+.DS_Store
