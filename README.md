@@ -1,6 +1,34 @@
-# Markdown Reference Guide
+# Markdown Reference
 
 A comprehensive guide to the most commonly used Markdown syntax.
+
+---
+
+## Table of Contents
+
+- [Markdown Reference](#markdown-reference)
+  - [Table of Contents](#table-of-contents)
+  - [Headers](#headers)
+  - [Text Formatting](#text-formatting)
+  - [Lists](#lists)
+    - [Unordered Lists](#unordered-lists)
+    - [Ordered Lists](#ordered-lists)
+    - [Task Lists](#task-lists)
+  - [Blockquotes](#blockquotes)
+  - [Horizontal Rule](#horizontal-rule)
+  - [Links](#links)
+  - [Images](#images)
+  - [Code](#code)
+    - [Inline Code](#inline-code)
+    - [Fenced Code Blocks](#fenced-code-blocks)
+  - [Tables](#tables)
+  - [Reference-Style Links and Images](#reference-style-links-and-images)
+  - [Linking to Headers (Table of Contents)](#linking-to-headers-table-of-contents)
+  - [Escaping Characters](#escaping-characters)
+  - [Math (Using LaTeX)](#math-using-latex)
+    - [Inline Math](#inline-math)
+    - [Block Equations](#block-equations)
+  - [Using HTML (Comments)](#using-html-comments)
 
 ---
 
@@ -90,22 +118,52 @@ Create task lists (checkboxes) within a list.
 
 ---
 
-## Tables
+## Blockquotes
 
-Tables are created using pipes `|` and hyphens `-`.
+Blockquotes are used to indicate quoted text.
 
 ```markdown
-| Header 1 | Header 2 | Header 3 |
-| :------- | :------: | -------: |
-| Align L  |  Center  |  Align R |
-| Cell 4   |  Cell 5  |   Cell 6 |
+> This is a blockquote.
+>
+> > This is a nested blockquote.
 ```
 
 **Output**:
-| Header 1 | Header 2 | Header 3 |
-| :------- | :------: | -------: |
-| Align L  |  Center  |  Align R |
-| Cell 4   |  Cell 5  |   Cell 6 |
+> This is a blockquote.
+>
+> > This is a nested blockquote.
+
+---
+
+## Horizontal Rule
+
+Create a horizontal rule with three or more asterisks `***`, dashes `---`, or underscores `___`.
+
+---
+
+## Links
+
+Create links to navigate to other pages or websites.
+
+```markdown
+[Google](https://www.google.com "Link to Google")
+```
+
+**Output**:
+[Google](https://www.google.com "Link to Google")
+
+---
+
+## Images
+
+The syntax for images is similar to links, but with a `!` at the beginning.
+
+```markdown
+![A placeholder image](https://placehold.co/400x200/EEE/31343C?text=Placeholder+Image "Placeholder Image")
+```
+
+**Output**:   
+![A placeholder image](https://placehold.co/400x200/EEE/31343C?text=Placeholder+Image "Placeholder Image")
 
 ---
 
@@ -143,7 +201,77 @@ function greet() {
 
 ---
 
-## Math (using LaTeX)
+## Tables
+
+Tables are created using pipes `|` and hyphens `-`.
+
+```markdown
+| Header 1 | Header 2 | Header 3 |
+| :------- | :------: | -------: |
+| Align L  |  Center  |  Align R |
+| Cell 4   |  Cell 5  |   Cell 6 |
+```
+
+**Output**:
+| Header 1 | Header 2 | Header 3 |
+| :------- | :------: | -------: |
+| Align L  |  Center  |  Align R |
+| Cell 4   |  Cell 5  |   Cell 6 |
+
+---
+
+## Reference-Style Links and Images
+
+Use reference-style links when reusing the same URLs.
+
+```markdown
+Learn more about [GitHub][gh] and [Stack Overflow][so] for coding help.
+
+[gh]: https://github.com "GitHub Homepage"
+[so]: https://stackoverflow.com "Stack Overflow Q&A"
+```
+
+**Output**:
+
+Learn more about [GitHub][gh] and [Stack Overflow][so] for coding help.
+
+[gh]: https://github.com "GitHub Homepage"
+[so]: https://stackoverflow.com "Stack Overflow Q&A"
+
+---
+
+## Linking to Headers (Table of Contents)
+
+Use internal links to jump to specific headers within the same document.
+
+```markdown
+- [Jump to Escaping Characters](#escaping-characters)
+- [Jump to Math (Using LaTeX)](#math-using-latex)
+  - [Inline Math](#inline-math)
+  - [Block Equations](#block-equations)
+```
+
+- [Jump to Escaping Characters](#escaping-characters)
+- [Jump to Math (Using LaTeX)](#math-using-latex)
+  - [Inline Math](#inline-math)
+  - [Block Equations](#block-equations)
+
+---
+
+## Escaping Characters
+
+To display a literal character that has special meaning in Markdown, use a backslash `\` before it.
+
+```markdown
+\*This is not italic.\*
+```
+
+**Output**:
+\*This is not italic.\*
+
+---
+
+## Math (Using LaTeX)
 
 For mathematical and scientific notation, many Markdown renderers support LaTeX.
 
@@ -173,69 +301,7 @@ $$x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}$$
 
 ---
 
-## Links
-
-Create links to navigate to other pages or websites.
-
-```markdown
-[Google](https://www.google.com "Link to Google")
-```
-
-**Output**:
-[Google](https://www.google.com "Link to Google")
-
----
-
-## Images
-
-The syntax for images is similar to links, but with a `!` at the beginning.
-
-```markdown
-![A placeholder image](https://placehold.co/400x200/EEE/31343C?text=Placeholder+Image "Placeholder Image")
-```
-
-**Output**:   
-![A placeholder image](https://placehold.co/400x200/EEE/31343C?text=Placeholder+Image "Placeholder Image")
-
----
-
-## Horizontal Rule
-
-Create a horizontal rule with three or more asterisks `***`, dashes `---`, or underscores `___`.
-
----
-
-## Blockquotes
-
-Blockquotes are used to indicate quoted text.
-
-```markdown
-> This is a blockquote.
->
-> > This is a nested blockquote.
-```
-
-**Output**:
-> This is a blockquote.
->
-> > This is a nested blockquote.
-
----
-
-## Escaping Characters
-
-To display a literal character that has special meaning in Markdown, use a backslash `\` before it.
-
-```markdown
-\*This is not italic.\*
-```
-
-**Output**:
-\*This is not italic.\*
-
----
-
-## Using HTML
+## Using HTML (Comments)
 
 Use raw HTML for features Markdown doesn't support, like comments and collapsible sections.
 
@@ -257,5 +323,3 @@ Use raw HTML for features Markdown doesn't support, like comments and collapsibl
   This content is hidden by default but is revealed when you click the summary text.
   You can even include **Markdown** `inside` HTML.
 </details>
-
----
