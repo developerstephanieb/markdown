@@ -213,12 +213,12 @@ Tables use pipes `|` to separate columns, with hyphens `-` and colons `:` to def
 Use internal links to jump to specific headers within the same document.
 
 ```markdown
-- [Jump to the next section](#escaping-characters)
-- [Jump to the first section](#headers)
+[Jump to the next section](#escaping-characters)
+[Jump to the first section](#headers)
 ```
 
-- [Jump to the next section](#escaping-characters)
-- [Jump to the first section](#headers)
+[Jump to the next section](#escaping-characters)
+[Jump to the first section](#headers)
 
 ---
 
@@ -263,7 +263,7 @@ $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
 
 Inline: The Pythagorean theorem is $a^2 + b^2 = c^2$.
 
-Block:
+Block:   
 $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
 
 ---
