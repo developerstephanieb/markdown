@@ -6,29 +6,20 @@ A comprehensive guide to the most commonly used Markdown syntax.
 
 ## Table of Contents
 
-- [Markdown Reference](#markdown-reference)
-  - [Table of Contents](#table-of-contents)
-  - [Headers](#headers)
-  - [Text Formatting](#text-formatting)
-  - [Lists](#lists)
-    - [Unordered Lists](#unordered-lists)
-    - [Ordered Lists](#ordered-lists)
-    - [Task Lists](#task-lists)
-  - [Blockquotes](#blockquotes)
-  - [Horizontal Rule](#horizontal-rule)
-  - [Links](#links)
-  - [Images](#images)
-  - [Code](#code)
-    - [Inline Code](#inline-code)
-    - [Fenced Code Blocks](#fenced-code-blocks)
-  - [Tables](#tables)
-  - [Reference-Style Links and Images](#reference-style-links-and-images)
-  - [Linking to Headers (Table of Contents)](#linking-to-headers-table-of-contents)
-  - [Escaping Characters](#escaping-characters)
-  - [Math (Using LaTeX)](#math-using-latex)
-    - [Inline Math](#inline-math)
-    - [Block Equations](#block-equations)
-  - [Using HTML (Comments)](#using-html-comments)
+[Headers](#headers)  
+[Text Formatting](#text-formatting)   
+[Lists](#lists)   
+[Blockquotes](#blockquotes)   
+[Horizontal Line](#horizontal-line)   
+[Links](#links)   
+[Images](#images)   
+[Code](#code)   
+[Tables](#tables)   
+[Linking to Headers](#linking-to-headers)   
+[Escaping Characters](#escaping-characters)   
+[Footnotes](#footnotes)   
+[Using LaTeX (Math)](#using-latex-math)   
+[Using HTML (Comments)](#using-html-comments)   
 
 ---
 
@@ -58,60 +49,48 @@ Text can be formatted to be bold, italic, or have a strikethrough.
 | Strikethrough | `~~text~~`                   | ~~This is strikethrough~~     |
 | Bold & Italic | `***text***` or `___text___` | ***This is bold and italic*** |
 
-
 ---
 
 ## Lists
 
-### Unordered Lists
-
-Use `*`, `+`, or `-` to create unordered lists.
+Lists can be unordered, ordered, or task-based, and items can be nested by indenting.
 
 ```markdown
-* Item 1
-+ Item 2
-  - Nested Item 2a
-  * Nested Item 2b
-+ Item 3
-```
-
-**Output**:
+Use `*`, `+`, or `-` to create ordered lists:
 * Item 1
 + Item 2
   - Nested Item 2a
   * Nested Item 2b
 + Item 3
 
-### Ordered Lists
-
-Use numbers followed by a period.
-
-```markdown
+Use numbers followed by a period to create ordered lists:
 1. First item
 2. Second item
-3. Third item
-   1. Nested item 3a
-   2. Nested item 3b
-```
-
-**Output**:
-1. First item
-2. Second item
-3. Third item
-   1. Nested item 3a
+3. Third item  
+   1. Nested item 3a  
    2. Nested item 3b
 
-### Task Lists
-
-Create task lists (checkboxes) within a list.
-
-```markdown
+Use `-[ ]` to create a checkbox and add an `x` inside to mark a task as complete:
 - [x] Completed task
 - [ ] Incomplete task
 - [ ] Another task
 ```
 
-**Output**:
+Use `*`, `+`, or `-` to create unordered lists:
+* Item 1
++ Item 2
+  - Nested Item 2a
+  * Nested Item 2b
++ Item 3
+
+Use numbers followed by a period to create ordered lists:
+1. First item
+2. Second item
+3. Third item  
+   1. Nested item 3a  
+   2. Nested item 3b
+
+Use `-[ ]` to create a checkbox and add an `x` inside to mark a task as complete:
 - [x] Completed task
 - [ ] Incomplete task
 - [ ] Another task
@@ -128,14 +107,13 @@ Blockquotes are used to indicate quoted text.
 > > This is a nested blockquote.
 ```
 
-**Output**:
 > This is a blockquote.
 >
 > > This is a nested blockquote.
 
 ---
 
-## Horizontal Rule
+## Horizontal Line
 
 Create a horizontal rule with three or more asterisks `***`, dashes `---`, or underscores `___`.
 
@@ -143,14 +121,21 @@ Create a horizontal rule with three or more asterisks `***`, dashes `---`, or un
 
 ## Links
 
-Create links to navigate to other pages or websites.
+Create links to navigate to other pages or external websites using either inline or reference-style formatting.
 
 ```markdown
-[Google](https://www.google.com "Link to Google")
+This is an inline link to [Google](https://www.google.com "Visit Google").
+
+This is a reference-style link to [Wikipedia][wiki].
+
+[wiki]: https://www.wikipedia.org "Visit Wikipedia"
 ```
 
-**Output**:
-[Google](https://www.google.com "Link to Google")
+This is an inline link to [Google](https://www.google.com "Visit Google").
+
+This is a reference-style link to [Wikipedia][wiki].
+
+[wiki]: https://www.wikipedia.org "Visit Wikipedia"
 
 ---
 
@@ -159,32 +144,34 @@ Create links to navigate to other pages or websites.
 The syntax for images is similar to links, but with a `!` at the beginning.
 
 ```markdown
-![A placeholder image](https://placehold.co/400x200/EEE/31343C?text=Placeholder+Image "Placeholder Image")
-```
+This is an inline image:  
+![Inline placeholder](https://placehold.co/400x200/EEE/31343C?text=Inline+Image "Inline Placeholder")
 
-**Output**:   
-![A placeholder image](https://placehold.co/400x200/EEE/31343C?text=Placeholder+Image "Placeholder Image")
+This is a reference-style image:  
+![Reference placeholder][img-ref]
+
+[img-ref]: https://placehold.co/400x200/EEE/31343C?text=Reference+Image "Reference Placeholder"
+```
+ 
+This is an inline image:  
+![Inline placeholder](https://placehold.co/400x200/EEE/31343C?text=Inline+Image "Inline Placeholder")
+
+This is a reference-style image:  
+![Reference placeholder][img-ref]
+
+[img-ref]: https://placehold.co/400x200/EEE/31343C?text=Reference+Image "Reference Placeholder"
 
 ---
 
 ## Code
 
-### Inline Code
+Use single backticks `` ` `` for inline code, or triple backticks ` ``` ` to create fenced code blocks with optional language syntax highlighting.
 
-Wrap code with single backticks `` ` ``.
-
-```markdown
-This is an example of `inline code`.
-```
-
-**Output**:
-This is an example of `inline code`.
-
-### Fenced Code Blocks
-
-Use triple backticks ` ``` ` to create a code block. You can also specify the language for syntax highlighting.
 
 ````markdown
+This is `inline code` inside a sentence.
+
+Here is a fenced code block with JavaScript syntax highlighting:
 ```javascript
 function greet() {
   console.log("Hello, world!");
@@ -192,7 +179,9 @@ function greet() {
 ```
 ````
 
-**Output**:
+This is `inline code` inside a sentence.
+
+Here is a fenced code block with JavaScript syntax highlighting:
 ```javascript
 function greet() {
   console.log("Hello, world!");
@@ -203,7 +192,7 @@ function greet() {
 
 ## Tables
 
-Tables are created using pipes `|` and hyphens `-`.
+Tables use pipes `|` to separate columns, with hyphens `-` and colons `:` to define headers and set alignment.
 
 ```markdown
 | Header 1 | Header 2 | Header 3 |
@@ -212,7 +201,6 @@ Tables are created using pipes `|` and hyphens `-`.
 | Cell 4   |  Cell 5  |   Cell 6 |
 ```
 
-**Output**:
 | Header 1 | Header 2 | Header 3 |
 | :------- | :------: | -------: |
 | Align L  |  Center  |  Align R |
@@ -220,41 +208,17 @@ Tables are created using pipes `|` and hyphens `-`.
 
 ---
 
-## Reference-Style Links and Images
-
-Use reference-style links when reusing the same URLs.
-
-```markdown
-Learn more about [GitHub][gh] and [Stack Overflow][so] for coding help.
-
-[gh]: https://github.com "GitHub Homepage"
-[so]: https://stackoverflow.com "Stack Overflow Q&A"
-```
-
-**Output**:
-
-Learn more about [GitHub][gh] and [Stack Overflow][so] for coding help.
-
-[gh]: https://github.com "GitHub Homepage"
-[so]: https://stackoverflow.com "Stack Overflow Q&A"
-
----
-
-## Linking to Headers (Table of Contents)
+## Linking to Headers
 
 Use internal links to jump to specific headers within the same document.
 
 ```markdown
-- [Jump to Escaping Characters](#escaping-characters)
-- [Jump to Math (Using LaTeX)](#math-using-latex)
-  - [Inline Math](#inline-math)
-  - [Block Equations](#block-equations)
+- [Jump to the next section](#escaping-characters)
+- [Jump to the first section](#headers)
 ```
 
-- [Jump to Escaping Characters](#escaping-characters)
-- [Jump to Math (Using LaTeX)](#math-using-latex)
-  - [Inline Math](#inline-math)
-  - [Block Equations](#block-equations)
+- [Jump to the next section](#escaping-characters)
+- [Jump to the first section](#headers)
 
 ---
 
@@ -266,38 +230,41 @@ To display a literal character that has special meaning in Markdown, use a backs
 \*This is not italic.\*
 ```
 
-**Output**:
 \*This is not italic.\*
 
 ---
 
-## Math (Using LaTeX)
+## Footnotes
 
-For mathematical and scientific notation, many Markdown renderers support LaTeX.
-
-### Inline Math
-
-Wrap equations in single dollar signs `$` for inline math.
+Use `[^label]` in the text and defined elsewhere in the document using `[^label]:`.
 
 ```markdown
-The Pythagorean theorem is $a^2 + b^2 = c^2$.
+Here is a statement with a footnote.[^1]
+
+[^1]: This is the footnote text.
 ```
 
-**Output**:
-The Pythagorean theorem is $a^2 + b^2 = c^2$.
+Here is a statement with a footnote.[^1]
 
-### Block Equations
+[^1]: This is the footnote text.
 
-Wrap equations in double dollar signs `$$` to display it as a centered block on its own line.
+---
+
+## Using LaTeX (Math)
+
+LaTeX syntax is often supported in Markdown for mathematical expressions, using single dollar signs `$` for inline math and double dollar signs `$$` for block equations.
 
 ```markdown
-The quadratic formula is:
-$$x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}$$
+Inline: The Pythagorean theorem is $a^2 + b^2 = c^2$.
+
+Block:
+$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
 ```
 
-**Output**:   
-The quadratic formula is:
-$$x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}$$
+Inline: The Pythagorean theorem is $a^2 + b^2 = c^2$.
+
+Block:
+$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
 
 ---
 
@@ -316,7 +283,6 @@ Use raw HTML for features Markdown doesn't support, like comments and collapsibl
 </details>
 ```
 
-**Output**:
 <details>
   <summary>Click to expand!</summary>
   
