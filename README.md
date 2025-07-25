@@ -124,18 +124,18 @@ Create a horizontal rule with three or more asterisks `***`, dashes `---`, or un
 Create links to navigate to other pages or external websites using either inline or reference-style formatting.
 
 ```markdown
-This is an inline link to [Google](https://www.google.com "Visit Google").
+This is an inline link to [NASA](https://www.nasa.gov "Visit NASA").
 
-This is a reference-style link to [Wikipedia][wiki].
+This is a reference-style link to [HubbleSite][hubble].
 
-[wiki]: https://www.wikipedia.org "Visit Wikipedia"
+[hubble]: https://hubblesite.org "Explore the Hubble Space Telescope"
 ```
 
-This is an inline link to [Google](https://www.google.com "Visit Google").
+This is an inline link to [NASA](https://www.nasa.gov "Visit NASA").
 
-This is a reference-style link to [Wikipedia][wiki].
+This is a reference-style link to [HubbleSite][hubble].
 
-[wiki]: https://www.wikipedia.org "Visit Wikipedia"
+[hubble]: https://hubblesite.org "Explore the Hubble Space Telescope"
 
 ---
 
@@ -165,13 +165,14 @@ This is a reference-style image:
 
 ## Code
 
-Use single backticks `` ` `` for inline code, or triple backticks ` ``` ` to create fenced code blocks with optional language syntax highlighting.
+Use single backticks `` `...` `` for inline code, or triple backticks ` ```...``` ` to create fenced code blocks with optional language syntax highlighting.
+
 
 
 ````markdown
 This is `inline code` inside a sentence.
 
-Here is a fenced code block with JavaScript syntax highlighting:
+Here is a fenced code block with Python syntax highlighting:
 ```javascript
 function greet() {
   console.log("Hello, world!");
@@ -217,7 +218,7 @@ Use internal links to jump to specific headers within the same document.
 [Jump to the first section](#headers)
 ```
 
-[Jump to the next section](#escaping-characters)
+[Jump to the next section](#escaping-characters)    
 [Jump to the first section](#headers)
 
 ---
@@ -252,18 +253,18 @@ Here is a statement with a footnote.[^1]
 
 ## Using LaTeX (Math)
 
-LaTeX syntax is often supported in Markdown for mathematical expressions, using single dollar signs `$` for inline math and double dollar signs `$$` for block equations.
+LaTeX syntax is often supported in Markdown for mathematical expressions, using single dollar signs `$...$` for inline math and double dollar signs `$$...$$` for block equations.
 
 ```markdown
-Inline: The Pythagorean theorem is $a^2 + b^2 = c^2$.
+This Pythagorean theorem formula is written inline: $a^2 + b^2 = c^2$
 
-Block:
+And this quadratic formula is written as a block equation:
 $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
 ```
 
-Inline: The Pythagorean theorem is $a^2 + b^2 = c^2$.
+This Pythagorean theorem formula is written inline: $a^2 + b^2 = c^2$
 
-Block:   
+And this quadratic formula is written as a block equation:    
 $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
 
 ---
