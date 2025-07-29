@@ -138,7 +138,7 @@ ___
 
 ## Code
 
-Use single backticks (`...`) for inline code, or triple backticks (` ``` `) to create fenced code blocks. To enable syntax highlighting, specify the language name after the opening backticks.
+Use single backticks (`` `...` ``) for inline code, or triple backticks (` ``` `) to create fenced code blocks. To enable syntax highlighting, specify the language name after the opening backticks.
 
 ````markdown
 This is `inline code`.
@@ -256,7 +256,7 @@ Here is a statement with a footnote.[^1]
 
 ## Using LaTeX (Math)
 
-LaTeX syntax is often supported in Markdown for mathematical expressions, using single dollar signs (`$...$`) for inline math and double dollar signs (`$$...$$`) for block equations.
+LaTeX is often supported in Markdown for mathematical expressions, using single dollar signs (`$...$`) for inline math and double dollar signs (`$$...$$`) for block equations.
 
 ```markdown
 This equation is written inline: $a^2 + b^2 = c^2$
