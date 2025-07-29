@@ -10,12 +10,11 @@ A comprehensive guide to the most commonly used Markdown syntax.
 [Text Formatting](#text-formatting)   
 [Lists](#lists)   
 [Blockquotes](#blockquotes)   
-[Horizontal Line](#horizontal-line)   
+[Horizontal Line](#horizontal-line)    
+[Code](#code)   
 [Links](#links)   
 [Images](#images)   
-[Code](#code)   
 [Tables](#tables)   
-[Linking to Headers](#linking-to-headers)   
 [Escaping Characters](#escaping-characters)   
 [Footnotes](#footnotes)   
 [Using LaTeX (Math)](#using-latex-math)   
@@ -25,7 +24,7 @@ A comprehensive guide to the most commonly used Markdown syntax.
 
 ## Headers
 
-Headers are created using the `#` symbol. The number of `#` symbols corresponds to the header level.
+Use the hash symbol (`#`) to create up to six levels of headers.
 
 ```markdown
 # Header 1
@@ -36,64 +35,74 @@ Headers are created using the `#` symbol. The number of `#` symbols corresponds 
 ###### Header 6
 ```
 
+# Header 1
+## Header 2
+### Header 3
+#### Header 4
+##### Header 5
+###### Header 6
+
 ---
 
 ## Text Formatting
 
-Text can be formatted to be bold, italic, or have a strikethrough.
+Text can be bold, italic, or have a strikethrough.
 
-| Style         | Syntax                       | Example                       |
-| ------------- | ---------------------------- | ----------------------------- |
-| Bold          | `**text**` or `__text__`     | **This is bold text**         |
-| Italic        | `*text*` or `_text_`         | *This is italic text*         |
-| Strikethrough | `~~text~~`                   | ~~This is strikethrough~~     |
-| Bold & Italic | `***text***` or `___text___` | ***This is bold and italic*** |
+```markdown
+**Bold text** or __Bold text__
+*Italic text* or _Italic Text_
+~~Strikethrough Text~~
+***Bold and Italic***
+```
+
+**Bold text** or __Bold text__   
+*Italic text* or _Italic Text_    
+~~Strikethrough Text~~    
+***Bold and Italic***    
 
 ---
 
 ## Lists
 
-Lists can be unordered, ordered, or task-based, and items can be nested by indenting.
+Lists can be ordered, unordered, or task-based.
 
 ```markdown
-Use `*`, `+`, or `-` to create ordered lists:
+Use asterisks (`*`), plus signs (`+`), or hyphens (`-`) to create ordered lists.
 * Item 1
 + Item 2
-  - Nested Item 2a
-  * Nested Item 2b
+  - Nested item 2a
+  * Nested item 2b
 + Item 3
 
-Use numbers followed by a period to create ordered lists:
-1. First item
-2. Second item
-3. Third item  
+Use numbers followed by a period to create ordered lists.
+1. Item 1
+2. Item 2
+3. Item 3
    1. Nested item 3a  
    2. Nested item 3b
 
-Use `-[ ]` to create a checkbox and add an `x` inside to mark a task as complete:
+Use `-[ ]` to create a checkbox. Add an `x` inside to mark a task as complete.
 - [x] Completed task
 - [ ] Incomplete task
-- [ ] Another task
 ```
 
-Use `*`, `+`, or `-` to create unordered lists:
+Use asterisks (`*`), plus signs (`+`), or hyphens (`-`) to create ordered lists.
 * Item 1
 + Item 2
-  - Nested Item 2a
-  * Nested Item 2b
+  - Nested item 2a
+  * Nested item 2b
 + Item 3
 
-Use numbers followed by a period to create ordered lists:
-1. First item
-2. Second item
-3. Third item  
+Use numbers followed by a period to create ordered lists.
+1. Item 1
+2. Item 2
+3. Item 3
    1. Nested item 3a  
    2. Nested item 3b
 
-Use `-[ ]` to create a checkbox and add an `x` inside to mark a task as complete:
+Use `-[ ]` to create a checkbox. Add an `x` inside to mark a task as complete.
 - [x] Completed task
 - [ ] Incomplete task
-- [ ] Another task
 
 ---
 
@@ -113,119 +122,113 @@ Blockquotes are used to indicate quoted text.
 
 ---
 
-## Horizontal Line
+## Horizontal Rule
 
-Create a horizontal rule with three or more asterisks `***`, dashes `---`, or underscores `___`.
+Create a thematic break using three or more asterisks (`***`), dashes (`---`), or underscores (`___`).
+
+```markdown
+***
+---
+___
+```
+
+***
+---
+___
+
+## Code
+
+Display code snippets inline using single backticks (`` `...` ``) or as a fenced block with optional syntax highlighting using triple backticks (` ```...``` `).
+
+````markdown
+This is `inline code`.
+
+```python
+# This is a fenced code block with Python syntax highlighting.
+def hello():
+  print("Hello, world!")
+```
+````
+
+This is `inline code`.
+
+```python
+# This is a fenced code block with Python syntax highlighting.
+def hello():
+  print("Hello, world!")
+```
 
 ---
 
 ## Links
 
-Create links to navigate to other pages or external websites using either inline or reference-style formatting.
+Create hyperlinks using inline, reference, or internal (anchor) styles.
 
 ```markdown
-This is an inline link to [NASA](https://www.nasa.gov "Visit NASA").
+This is an inline link to [NASA](https://www.nasa.gov "Visit NASA") with an optional hover title.   
 
-This is a reference-style link to [HubbleSite][hubble].
+This is a reference-style link to [HubbleSite][hubble], with the URL defined elsewhere in the document.  
 
 [hubble]: https://hubblesite.org "Explore the Hubble Space Telescope"
+
+This is an internal link to the [Images section](#images). The anchor ID is the header text in lowercase_and_hyphens.
 ```
 
-This is an inline link to [NASA](https://www.nasa.gov "Visit NASA").
+This is an inline link to [NASA](https://www.nasa.gov "Visit NASA") with an optional hover title.   
 
-This is a reference-style link to [HubbleSite][hubble].
+This is a reference-style link to [HubbleSite][hubble], with the URL defined elsewhere in the document.  
 
 [hubble]: https://hubblesite.org "Explore the Hubble Space Telescope"
+
+This is an internal link to the [Images section](#images). The anchor ID is the header text in lowercase_and_hyphens.
 
 ---
 
 ## Images
 
-The syntax for images is similar to links, but with a `!` at the beginning.
+The syntax to embed images is similar to links, but prefixed with an exclamation mark (`!`).
 
 ```markdown
-This is an inline image:  
+This is an inline image URL with an optional hover title.    
 ![Inline placeholder](https://placehold.co/400x200/EEE/31343C?text=Inline+Image "Inline Placeholder")
 
-This is a reference-style image:  
+This is a reference-style image with the URL defined elsewhere in the document.   
 ![Reference placeholder][img-ref]
 
 [img-ref]: https://placehold.co/400x200/EEE/31343C?text=Reference+Image "Reference Placeholder"
 ```
  
-This is an inline image:  
+This is an inline image URL with an optional hover title.    
 ![Inline placeholder](https://placehold.co/400x200/EEE/31343C?text=Inline+Image "Inline Placeholder")
 
-This is a reference-style image:  
+This is a reference-style image with the URL defined elsewhere in the document.   
 ![Reference placeholder][img-ref]
 
 [img-ref]: https://placehold.co/400x200/EEE/31343C?text=Reference+Image "Reference Placeholder"
 
 ---
 
-## Code
-
-Use single backticks `` `...` `` for inline code, or triple backticks ` ```...``` ` to create fenced code blocks with optional language syntax highlighting.
-
-
-
-````markdown
-This is `inline code` inside a sentence.
-
-Here is a fenced code block with Python syntax highlighting:
-```javascript
-function greet() {
-  console.log("Hello, world!");
-}
-```
-````
-
-This is `inline code` inside a sentence.
-
-Here is a fenced code block with JavaScript syntax highlighting:
-```javascript
-function greet() {
-  console.log("Hello, world!");
-}
-```
-
----
-
 ## Tables
 
-Tables use pipes `|` to separate columns, with hyphens `-` and colons `:` to define headers and set alignment.
+Create tables using pipes (`|`) for columns and hyphens (`-`) for the header row. Use colons (`:`) to set column alignment.
 
 ```markdown
-| Header 1 | Header 2 | Header 3 |
-| :------- | :------: | -------: |
-| Align L  |  Center  |  Align R |
-| Cell 4   |  Cell 5  |   Cell 6 |
+| Left-Aligned | Center-Aligned | Right-Aligned |
+| :----------- | :------------: | ------------: |
+| Cell 1       |     Cell 2     |        Cell 3 |
+| Cell 4       |     Cell 5     |        Cell 6 |
 ```
 
-| Header 1 | Header 2 | Header 3 |
-| :------- | :------: | -------: |
-| Align L  |  Center  |  Align R |
-| Cell 4   |  Cell 5  |   Cell 6 |
-
----
-
-## Linking to Headers
-
-Use internal links to jump to specific headers within the same document.
-
-```markdown
-[Jump to the next section](#escaping-characters)
-[Jump to the first section](#headers)
-```
-
-[Jump to the next section](#escaping-characters)    
-[Jump to the first section](#headers)
+| Left-Aligned | Center-Aligned | Right-Aligned |
+| :----------- | :------------: | ------------: |
+| Cell 1       |     Cell 2     |        Cell 3 |
+| Cell 4       |     Cell 5     |        Cell 6 |
 
 ---
 
 ## Escaping Characters
 
-To display a literal character that has special meaning in Markdown, use a backslash `\` before it.
+To display a literal character that has special meaning in Markdown, prefix it with a backslash (`\`).
 
 ```markdown
 \*This is not italic.\*
@@ -237,7 +240,7 @@ To display a literal character that has special meaning in Markdown, use a backs
 
 ## Footnotes
 
-Use `[^label]` in the text and defined elsewhere in the document using `[^label]:`.
+Add footnotes using `[^n]` for the reference and `[^n]:` for the definition. 
 
 ```markdown
 Here is a statement with a footnote.[^1]
@@ -253,18 +256,18 @@ Here is a statement with a footnote.[^1]
 
 ## Using LaTeX (Math)
 
-LaTeX syntax is often supported in Markdown for mathematical expressions, using single dollar signs `$...$` for inline math and double dollar signs `$$...$$` for block equations.
+LaTeX syntax is often supported in Markdown for mathematical expressions, using single dollar signs (`$...$`) for inline math and double dollar signs (`$$...$$`) for block equations.
 
 ```markdown
-This Pythagorean theorem formula is written inline: $a^2 + b^2 = c^2$
+This equation is written inline: $a^2 + b^2 = c^2$
 
-And this quadratic formula is written as a block equation:
+This formula is written as a block equation:
 $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
 ```
 
-This Pythagorean theorem formula is written inline: $a^2 + b^2 = c^2$
+This equation is written inline: $a^2 + b^2 = c^2$
 
-And this quadratic formula is written as a block equation:    
+This formula is written as a block equation:
 $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
 
 ---
