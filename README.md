@@ -138,7 +138,7 @@ ___
 
 ## Code
 
-Use single backticks (`` `...` ``) for inline code, or triple backticks (` ``` `) to create fenced code blocks. To enable syntax highlighting, specify the language name after the opening backticks.
+Use single backticks (`` `...` ``) for inline code, or triple backticks (` ``` `) to create fenced code blocks. To enable syntax highlighting in a fenced block, specify the language name after the opening backticks.
 
 ````markdown
 This is `inline code`.
