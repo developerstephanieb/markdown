@@ -108,7 +108,7 @@ Use `-[ ]` to create a checkbox. Add an `x` inside to mark a task as complete.
 
 ## Blockquotes
 
-Blockquotes are used to indicate quoted text.
+Use the greater-than symbol (`>`) to create blockquotes for quoted text.
 
 ```markdown
 > This is a blockquote.
@@ -124,7 +124,7 @@ Blockquotes are used to indicate quoted text.
 
 ## Horizontal Rule
 
-Create a thematic break using three or more asterisks (`***`), dashes (`---`), or underscores (`___`).
+Use three or more asterisks (`***`), dashes (`---`), or underscores (`___`) to create a thematic break.
 
 ```markdown
 ***
@@ -138,7 +138,7 @@ ___
 
 ## Code
 
-Use single backticks (`` `...` ``) for inline code, or triple backticks (` ``` `) to create fenced code blocks. To enable syntax highlighting in a fenced block, specify the language name after the opening backticks.
+Use single backticks (`` `...` ``) for inline code, or triple backticks (` ``` `) for fenced code blocks. To enable syntax highlighting in a fenced code block, specify the language name after the opening backticks.
 
 ````markdown
 This is `inline code`.
@@ -162,7 +162,7 @@ def hello():
 
 ## Links
 
-Create hyperlinks using inline, reference, or internal (anchor) styles.
+Hyperlinks can be inline, reference-style, or internal (anchor).
 
 ```markdown
 This is an inline link to [NASA](https://www.nasa.gov "Visit NASA") with an optional hover title.   
@@ -171,7 +171,8 @@ This is a reference-style link to [HubbleSite][hubble], with the URL defined els
 
 [hubble]: https://hubblesite.org "Explore the Hubble Space Telescope"
 
-This is an internal link to the [Images section](#images). The anchor ID is the header text in lowercase_and_hyphens.
+This is an internal link to the [Images section](#images). 
+The anchor ID is the header text in lowercase_and_hyphens.
 ```
 
 This is an inline link to [NASA](https://www.nasa.gov "Visit NASA") with an optional hover title.   
@@ -180,7 +181,8 @@ This is a reference-style link to [HubbleSite][hubble], with the URL defined els
 
 [hubble]: https://hubblesite.org "Explore the Hubble Space Telescope"
 
-This is an internal link to the [Images section](#images). The anchor ID is the header text in lowercase_and_hyphens.
+This is an internal link to the [Images section](#images). 
+The anchor ID is the header text in lowercase_and_hyphens.
 
 ---
 
@@ -228,7 +230,7 @@ Create tables using pipes (`|`) for columns and hyphens (`-`) for the header row
 
 ## Escaping Characters
 
-To display a literal character that has special meaning in Markdown, prefix it with a backslash (`\`).
+Use a backslash (`\`) to display special Markdown characters literally.
 
 ```markdown
 \*This is not italic.\*
@@ -240,7 +242,7 @@ To display a literal character that has special meaning in Markdown, prefix it w
 
 ## Footnotes
 
-Add footnotes using `[^n]` for the reference and `[^n]:` for the definition. 
+Create footnotes using `[^n]` for the reference and `[^n]:` for the definition. 
 
 ```markdown
 Here is a statement with a footnote.[^1]
@@ -256,18 +258,18 @@ Here is a statement with a footnote.[^1]
 
 ## Using LaTeX (Math)
 
-LaTeX is often supported in Markdown for mathematical expressions, using single dollar signs (`$...$`) for inline math and double dollar signs (`$$...$$`) for block equations.
+Use LaTeX for advanced mathematical expressions. Wrap equations in single dollar signs (`$...$`) for inline math and double dollar signs (`$$...$$`) for display math.
 
 ```markdown
-This equation is written inline: $a^2 + b^2 = c^2$
+This is inline math: $a^2 + b^2 = c^2$
 
-This equation is written as a block:    
+This is display math:    
 $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
 ```
 
-This equation is written inline: $a^2 + b^2 = c^2$
+This is inline math: $a^2 + b^2 = c^2$
 
-This equation is written as a block:    
+This is display math:    
 $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
 
 ---
