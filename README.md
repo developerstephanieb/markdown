@@ -162,27 +162,33 @@ def hello():
 
 ## Links
 
-Hyperlinks can be inline, reference-style, or internal (anchor).
+Hyperlinks can be inline, reference-style, internal, or relative.
 
 ```markdown
 This is an inline link to [NASA](https://www.nasa.gov "Visit NASA") with an optional hover title.   
 
-This is a reference-style link to [HubbleSite][hubble], with the URL defined elsewhere in the document.  
+This is a reference-style link to [HubbleSite][hubble].  
 
 [hubble]: https://hubblesite.org "Explore the Hubble Space Telescope"
 
 This is an internal link to the [Images section](#images). 
-The anchor ID is the header text in lowercase_and_hyphens.
+
+[Link to a file in the same directory](./notes.md)
+[Link to a file in a subdirectory](./docs/contributing.md)
+[Link to a file in a parent directory](../README.md)
 ```
 
 This is an inline link to [NASA](https://www.nasa.gov "Visit NASA") with an optional hover title.   
 
-This is a reference-style link to [HubbleSite][hubble], with the URL defined elsewhere in the document.  
+This is a reference-style link to [HubbleSite][hubble].  
 
 [hubble]: https://hubblesite.org "Explore the Hubble Space Telescope"
 
 This is an internal link to the [Images section](#images). 
-The anchor ID is the header text in lowercase_and_hyphens.
+
+[Link to a file in the same directory](./notes.md)   
+[Link to a file in a subdirectory](./docs/contributing.md)   
+[Link to a file in a parent directory](../README.md)   
 
 ---
 
