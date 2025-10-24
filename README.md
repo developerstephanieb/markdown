@@ -1,4 +1,4 @@
-# Markdown Reference
+# Markdown
 
 A comprehensive guide to the most commonly used Markdown syntax.
 
